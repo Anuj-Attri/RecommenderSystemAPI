@@ -46,3 +46,48 @@ cd RecommenderSystemAPI
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
+
+3. Install the required dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+4. Verify that `Recommender.pkl` is present in the model directory.
+
+## Usage
+### Run the Flask App:
+1. Start the API server:
+```
+python app.py
+```
+2. Make Predictions:
+Send a POST request to the /predict endpoint. Example using curl:
+```
+curl -X POST http://localhost:5000/predict \
+-H "Content-Type: application/json" \
+-d '{"feature1": value1, "feature2": value2, "feature3": value3}'
+```
+
+### Alternatively, use Python:
+```
+import requests
+
+url = "http://localhost:5000/predict"
+data = {"feature1": value1, "feature2": value2, "feature3": value3}
+response = requests.post(url, json=data)
+print(response.json())
+```
+A successful request returns:
+```
+{
+    "prediction": [5.3]
+}
+```
+
+If there's an error:
+```
+{
+    "error": "Invalid input format"
+}
+```
