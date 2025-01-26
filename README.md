@@ -91,3 +91,6 @@ If there's an error:
     "error": "Invalid input format"
 }
 ```
+
+## Contribution
+Contributions are welcome! If you'd like to improve the project, please fork the repository, make changes, and submit a pull request.
