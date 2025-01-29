@@ -94,3 +94,6 @@ If there's an error:
 
 ## Contribution
 Contributions are welcome! If you'd like to improve the project, please fork the repository, make changes, and submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
